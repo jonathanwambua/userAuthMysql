@@ -7,21 +7,21 @@ switch(true){
     case isset($_POST['register']):
         //extract the $_POST array values for name, password and email
             $fullnames = $_POST['fullnames'];
-            $email = //
-            $password = //
-            $country = //
-            $gender = //   
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $country = $_POST['country'];
+            $gender = $_POST['gender'];   
         registerUser($fullnames, $email, $password, $gender, $country);
         break;
 
     case isset($_POST['login']):
-            $email = //
-            $password = //
+            $email = $_POST['email'];
+            $password = $_POST['password'];
         loginUser($email, $password);
         break;
     case isset($_POST["reset"]):
-            $email = //
-            $password = //
+            $email = $_POST['email'];
+            $password = $_POST['password'];
         resetPassword($email, $password);
         break;
     case isset($_POST["delete"]):
